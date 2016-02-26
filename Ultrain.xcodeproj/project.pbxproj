@@ -15,6 +15,7 @@
 		C7A8654F1C7FD4FF00FC22C0 /* UltrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8654E1C7FD4FF00FC22C0 /* UltrainTests.swift */; };
 		C7A8655A1C7FD4FF00FC22C0 /* UltrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865591C7FD4FF00FC22C0 /* UltrainUITests.swift */; };
 		C7A865681C7FD53C00FC22C0 /* gym-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7A865671C7FD53C00FC22C0 /* gym-pic.jpg */; };
+		C7A8656C1C80BCF000FC22C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8656B1C80BCF000FC22C0 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C7A865591C7FD4FF00FC22C0 /* UltrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrainUITests.swift; sourceTree = "<group>"; };
 		C7A8655B1C7FD4FF00FC22C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7A865671C7FD53C00FC22C0 /* gym-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "gym-pic.jpg"; path = "../../../Downloads/gym-pic.jpg"; sourceTree = "<group>"; };
+		C7A8656B1C80BCF000FC22C0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */,
 				C7A8653B1C7FD4FE00FC22C0 /* ViewController.swift */,
 				C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */,
+				C7A8656B1C80BCF000FC22C0 /* LoginView.swift */,
 				C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */,
 				C7A865421C7FD4FE00FC22C0 /* LaunchScreen.storyboard */,
 				C7A865451C7FD4FF00FC22C0 /* Info.plist */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A8656C1C80BCF000FC22C0 /* LoginView.swift in Sources */,
 				C7A8653C1C7FD4FE00FC22C0 /* ViewController.swift in Sources */,
 				C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */,
 			);

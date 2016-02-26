@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ultrain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginView" customModule="Ultrain" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,6 +27,9 @@
                                     <color key="titleColor" red="1" green="0.3182787769" blue="0.99625196819999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.57427082620000003" green="0.31561153199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NDH-AV-Z1b"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Password" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9YL-uV-c9f">
                                 <rect key="frame" x="130" y="300" width="84" height="27"/>
@@ -40,13 +43,15 @@
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="48"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-uh-P7A">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-uh-P7A">
                                 <rect key="frame" x="207" y="233" width="186" height="30"/>
+                                <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qac-iw-glh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qac-iw-glh">
                                 <rect key="frame" x="207" y="299" width="186" height="30"/>
+                                <color key="textColor" red="0.52466459424083767" green="0.52466459424083767" blue="0.52466459424083767" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -63,14 +68,114 @@
                                     <color key="titleColor" red="1" green="0.3182787769" blue="0.99625196819999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.57427082620000003" green="0.31561153199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0zD-OC-buU" kind="show" identifier="segueToSignup" id="mHL-4m-Vyi"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Username or password incorrect, please try again!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YEa-PA-6xB">
+                                <rect key="frame" x="188" y="452" width="240" height="128"/>
+                                <color key="textColor" red="1" green="0.065210725832134941" blue="0.023643398107640046" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="LoginTapped" destination="ks3-Iv-JO7" id="tXx-pN-icz"/>
+                        <outlet property="PasswordField" destination="qac-iw-glh" id="nLy-kq-0ux"/>
+                        <outlet property="UsernameField" destination="9wg-uh-P7A" id="Ly3-5s-9sE"/>
+                        <outlet property="loginAlert" destination="YEa-PA-6xB" id="p3V-nO-yrH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hke-qy-EN3">
+            <objects>
+                <viewController id="GdK-Pu-amn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i1a-9n-SzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="86g-dk-4HF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WEt-t8-Dbb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVx-TU-5Gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="1138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hpy-YX-yJS">
+            <objects>
+                <viewController id="0zD-OC-buU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JoU-34-Uyf"/>
+                        <viewControllerLayoutGuide type="bottom" id="U9X-6V-kzO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HBh-Oc-yW8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sign Up Now!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BRO-TW-HFh">
+                                <rect key="frame" x="129" y="116" width="343" height="128"/>
+                                <color key="textColor" red="1" green="0.5549236722486639" blue="0.90541192641497426" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pH9-eb-gaF">
+                                <rect key="frame" x="211" y="252" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htG-XQ-er8">
+                                <rect key="frame" x="211" y="315" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrP-jD-651">
+                                <rect key="frame" x="211" y="376" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PTd-wT-VHi">
+                                <rect key="frame" x="138" y="252" width="65" height="30"/>
+                                <color key="textColor" red="0.52429292767809865" green="0.61367425768541506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Email Address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uLs-K6-6oN">
+                                <rect key="frame" x="102" y="315" width="101" height="30"/>
+                                <color key="textColor" red="0.52429292770000002" green="0.61367425769999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Password" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6sV-nW-cPQ">
+                                <rect key="frame" x="128" y="376" width="75" height="30"/>
+                                <color key="textColor" red="0.52429292770000002" green="0.61367425769999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hn-k6-oPi">
+                                <rect key="frame" x="265" y="452" width="71" height="30"/>
+                                <color key="backgroundColor" red="0.48691344720000002" green="0.26760108999999999" blue="0.84788121729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="0.3182787769" blue="0.99625196819999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.57427082620000003" green="0.31561153199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.70556125018288518" blue="0.57839550934994621" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bM6-dM-epN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="324"/>
         </scene>
     </scenes>
     <resources>
