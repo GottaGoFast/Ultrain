@@ -1,1 +1,1 @@
-This is the IOS app for Ultimate Trainer
+This is the IOS app for Ultimate Trainer. Yea!
