@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C89F0F3ED8F7B19AEEDC964 /* Pods_Ultrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */; };
 		C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */; };
 		C7A8653C1C7FD4FE00FC22C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8653B1C7FD4FE00FC22C0 /* ViewController.swift */; };
 		C7A8653F1C7FD4FE00FC22C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */; };
@@ -14,8 +15,7 @@
 		C7A865441C7FD4FE00FC22C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A865421C7FD4FE00FC22C0 /* LaunchScreen.storyboard */; };
 		C7A8654F1C7FD4FF00FC22C0 /* UltrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8654E1C7FD4FF00FC22C0 /* UltrainTests.swift */; };
 		C7A8655A1C7FD4FF00FC22C0 /* UltrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865591C7FD4FF00FC22C0 /* UltrainUITests.swift */; };
-		C7A865681C7FD53C00FC22C0 /* gym-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7A865671C7FD53C00FC22C0 /* gym-pic.jpg */; };
-		C7A8656C1C80BCF000FC22C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8656B1C80BCF000FC22C0 /* LoginView.swift */; };
+		C7A865681C7FD53C00FC22C0 /* UltrainResources in Resources */ = {isa = PBXBuildFile; fileRef = C7A865671C7FD53C00FC22C0 /* UltrainResources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A97D8FF7FAD55AEFF6AF93 /* Pods-Ultrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ultrain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ultrain/Pods-Ultrain.debug.xcconfig"; sourceTree = "<group>"; };
+		4521A7386664945EF144F7E9 /* Pods-Ultrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ultrain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ultrain/Pods-Ultrain.release.xcconfig"; sourceTree = "<group>"; };
+		69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ultrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A865361C7FD4FE00FC22C0 /* Ultrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ultrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7A8653B1C7FD4FE00FC22C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,8 +52,7 @@
 		C7A865551C7FD4FF00FC22C0 /* UltrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A865591C7FD4FF00FC22C0 /* UltrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltrainUITests.swift; sourceTree = "<group>"; };
 		C7A8655B1C7FD4FF00FC22C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7A865671C7FD53C00FC22C0 /* gym-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "gym-pic.jpg"; path = "../../../Downloads/gym-pic.jpg"; sourceTree = "<group>"; };
-		C7A8656B1C80BCF000FC22C0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C7A865671C7FD53C00FC22C0 /* UltrainResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UltrainResources; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C89F0F3ED8F7B19AEEDC964 /* Pods_Ultrain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9278454FBDB924667DCECC94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7A8652D1C7FD4FE00FC22C0 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +96,9 @@
 				C7A8654D1C7FD4FF00FC22C0 /* UltrainTests */,
 				C7A865581C7FD4FF00FC22C0 /* UltrainUITests */,
 				C7A865371C7FD4FE00FC22C0 /* Products */,
-				C7A865671C7FD53C00FC22C0 /* gym-pic.jpg */,
+				C7A865671C7FD53C00FC22C0 /* UltrainResources */,
+				FDF00F927475A38580AB65CF /* Pods */,
+				9278454FBDB924667DCECC94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +118,6 @@
 				C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */,
 				C7A8653B1C7FD4FE00FC22C0 /* ViewController.swift */,
 				C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */,
-				C7A8656B1C80BCF000FC22C0 /* LoginView.swift */,
 				C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */,
 				C7A865421C7FD4FE00FC22C0 /* LaunchScreen.storyboard */,
 				C7A865451C7FD4FF00FC22C0 /* Info.plist */,
@@ -131,6 +143,15 @@
 			path = UltrainUITests;
 			sourceTree = "<group>";
 		};
+		FDF00F927475A38580AB65CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01A97D8FF7FAD55AEFF6AF93 /* Pods-Ultrain.debug.xcconfig */,
+				4521A7386664945EF144F7E9 /* Pods-Ultrain.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7A8655E1C7FD4FF00FC22C0 /* Build configuration list for PBXNativeTarget "Ultrain" */;
 			buildPhases = (
+				11D8868FC31ACB4E01FA2DD2 /* Check Pods Manifest.lock */,
 				C7A865321C7FD4FE00FC22C0 /* Sources */,
 				C7A865331C7FD4FE00FC22C0 /* Frameworks */,
 				C7A865341C7FD4FE00FC22C0 /* Resources */,
+				AEBA0D7289EFC8A305557D46 /* Embed Pods Frameworks */,
+				5B6759C95DDD9B819BC135C5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,7 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7A865681C7FD53C00FC22C0 /* gym-pic.jpg in Resources */,
+				C7A865681C7FD53C00FC22C0 /* UltrainResources in Resources */,
 				C7A865441C7FD4FE00FC22C0 /* LaunchScreen.storyboard in Resources */,
 				C7A865411C7FD4FE00FC22C0 /* Assets.xcassets in Resources */,
 				C7A8653F1C7FD4FE00FC22C0 /* Main.storyboard in Resources */,
@@ -258,12 +282,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11D8868FC31ACB4E01FA2DD2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B6759C95DDD9B819BC135C5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ultrain/Pods-Ultrain-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEBA0D7289EFC8A305557D46 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ultrain/Pods-Ultrain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C7A865321C7FD4FE00FC22C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7A8656C1C80BCF000FC22C0 /* LoginView.swift in Sources */,
 				C7A8653C1C7FD4FE00FC22C0 /* ViewController.swift in Sources */,
 				C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */,
 			);
@@ -403,6 +474,7 @@
 		};
 		C7A8655F1C7FD4FF00FC22C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01A97D8FF7FAD55AEFF6AF93 /* Pods-Ultrain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ultrain/Info.plist;
@@ -414,6 +486,7 @@
 		};
 		C7A865601C7FD4FF00FC22C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4521A7386664945EF144F7E9 /* Pods-Ultrain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ultrain/Info.plist;
@@ -490,6 +563,7 @@
 				C7A865601C7FD4FF00FC22C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7A865611C7FD4FF00FC22C0 /* Build configuration list for PBXNativeTarget "UltrainTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +572,7 @@
 				C7A865631C7FD4FF00FC22C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7A865641C7FD4FF00FC22C0 /* Build configuration list for PBXNativeTarget "UltrainUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +581,7 @@
 				C7A865661C7FD4FF00FC22C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
