@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Login View-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginView" customModule="Ultrain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Ultrain" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,6 +29,7 @@
                                     <color key="titleShadowColor" red="0.57427082620000003" green="0.31561153199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sfv-9d-ilL"/>
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NDH-AV-Z1b"/>
                                 </connections>
                             </button>
@@ -70,33 +71,30 @@
                                     <color key="titleShadowColor" red="0.57427082620000003" green="0.31561153199999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="SignupTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jkX-ca-0wN"/>
                                     <segue destination="0zD-OC-buU" kind="show" identifier="segueToSignup" id="mHL-4m-Vyi"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Username or password incorrect, please try again!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YEa-PA-6xB">
-                                <rect key="frame" x="188" y="452" width="240" height="128"/>
-                                <color key="textColor" red="1" green="0.065210725832134941" blue="0.023643398107640046" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="LoginTapped" destination="ks3-Iv-JO7" id="tXx-pN-icz"/>
+                        <outlet property="Password" destination="qac-iw-glh" id="Uz5-IT-eVJ"/>
                         <outlet property="PasswordField" destination="qac-iw-glh" id="nLy-kq-0ux"/>
+                        <outlet property="Username" destination="9wg-uh-P7A" id="N5X-DD-g5u"/>
                         <outlet property="UsernameField" destination="9wg-uh-P7A" id="Ly3-5s-9sE"/>
-                        <outlet property="loginAlert" destination="YEa-PA-6xB" id="p3V-nO-yrH"/>
+                        <segue destination="GdK-Pu-amn" kind="show" identifier="loginToMainView" id="75v-ch-95e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="324"/>
+            <point key="canvasLocation" x="81" y="280"/>
         </scene>
-        <!--View Controller-->
+        <!--Calendar View-->
         <scene sceneID="hke-qy-EN3">
             <objects>
-                <viewController id="GdK-Pu-amn" sceneMemberID="viewController">
+                <viewController id="GdK-Pu-amn" customClass="CalendarView" customModule="Ultrain" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i1a-9n-SzT"/>
                         <viewControllerLayoutGuide type="bottom" id="86g-dk-4HF"/>
@@ -104,12 +102,24 @@
                     <view key="view" contentMode="scaleToFill" id="WEt-t8-Dbb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sjA-iB-bKz">
+                                <rect key="frame" x="161" y="111" width="321" height="279"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="sjA-iB-bKz" id="byF-Tn-BjZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVx-TU-5Gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="1138"/>
+            <point key="canvasLocation" x="678" y="1088"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hpy-YX-yJS">
