@@ -27,18 +27,15 @@ class LoginVC: UIViewController {
             popAlert("Login Failed", message: "Please enter username and password")
         }
         else{
-            let loginString = NSString(format: "%@:%@", usernameString, passwordString)
-            let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
-            let base64LoginString = loginData.base64EncodedStringWithOptions([])
+            let loginString = String(format: "%@:%@", usernameString, passwordString)
             
             let url = NSURL(string: "engineering.wustl.edu/cse")!
+            let session = NSURLSession.sharedSession()
+            let request = NSMutableURLRequest(URL: url)
+            request.HTTPMethod = "POST"
+            request.setValue(loginString, forHTTPHeaderField: "Authorization")
             
-            let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-            let authString = "Basic \(base64LoginString)"
-            config.HTTPAdditionalHeaders = ["Authorization" : authString]
-            let session = NSURLSession(configuration: config)
-            
-            session.dataTaskWithURL(url) {
+            session.dataTaskWithRequest(request) {
                 (let data, let response, let error) in
                 if let httpResponse = response as? NSHTTPURLResponse {
                     do{
