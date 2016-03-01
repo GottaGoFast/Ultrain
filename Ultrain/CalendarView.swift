@@ -23,7 +23,7 @@ class CalendarView: UIViewController {
     }
     
     func loadTextField(data:NSDictionary){
-        var textToShow:String
+        var textToShow:String = ""
         let enumerator = data.keyEnumerator()
         while let key = enumerator.nextObject(){
             textToShow = textToShow + (key as! String)

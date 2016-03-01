@@ -24,10 +24,14 @@ class SignupVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backToLogIn(sender: UIButton) {
+        
+    }
     @IBAction func SignupTapped(sender: UIButton) {
         let nameString = NameField.text! as NSString
         let username = UsernameField.text! as NSString
         let password = PasswordField.text! as NSString
+        
         
         
     }

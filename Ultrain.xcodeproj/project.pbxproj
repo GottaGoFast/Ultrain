@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C89F0F3ED8F7B19AEEDC964 /* Pods_Ultrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */; };
+		C706DD001C84AB9400632646 /* APIProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706DCFF1C84AB9400632646 /* APIProxy.swift */; };
 		C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */; };
 		C7A8653F1C7FD4FE00FC22C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */; };
 		C7A865411C7FD4FE00FC22C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		01A97D8FF7FAD55AEFF6AF93 /* Pods-Ultrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ultrain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ultrain/Pods-Ultrain.debug.xcconfig"; sourceTree = "<group>"; };
 		4521A7386664945EF144F7E9 /* Pods-Ultrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ultrain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ultrain/Pods-Ultrain.release.xcconfig"; sourceTree = "<group>"; };
 		69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ultrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C706DCFF1C84AB9400632646 /* APIProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProxy.swift; sourceTree = "<group>"; };
 		C7A865361C7FD4FE00FC22C0 /* Ultrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ultrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7A8653E1C7FD4FE00FC22C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */,
 				C7A865731C83D4C500FC22C0 /* SignupVC.swift */,
 				C7A865711C83B96E00FC22C0 /* CalendarView.swift */,
+				C706DCFF1C84AB9400632646 /* APIProxy.swift */,
 				C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */,
 				C7A865421C7FD4FE00FC22C0 /* LaunchScreen.storyboard */,
 				C7A865451C7FD4FF00FC22C0 /* Info.plist */,
@@ -344,6 +347,7 @@
 				C7A865741C83D4C500FC22C0 /* SignupVC.swift in Sources */,
 				C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */,
 				C7A8656E1C80FECF00FC22C0 /* LoginVC.swift in Sources */,
+				C706DD001C84AB9400632646 /* APIProxy.swift in Sources */,
 				C7A865721C83B96E00FC22C0 /* CalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

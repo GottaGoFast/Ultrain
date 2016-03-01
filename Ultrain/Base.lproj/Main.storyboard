@@ -20,7 +20,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gym-pic.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kD6-QX-8vJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks3-Iv-JO7">
+                            <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks3-Iv-JO7" userLabel="LoginTapped">
                                 <rect key="frame" x="328" y="385" width="65" height="30"/>
                                 <color key="backgroundColor" red="0.48691344720000002" green="0.26760108999999999" blue="0.84788121729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.99574797542391325" green="0.96681093865060752" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -30,7 +30,6 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sfv-9d-ilL"/>
-                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NDH-AV-Z1b"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Password" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9YL-uV-c9f">
@@ -51,19 +50,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qac-iw-glh">
-                                <rect key="frame" x="207" y="299" width="186" height="30"/>
-                                <color key="textColor" red="0.52466459424083767" green="0.52466459424083767" blue="0.52466459424083767" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Email" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oar-db-C4c">
                                 <rect key="frame" x="145" y="236" width="54" height="24"/>
                                 <color key="textColor" red="1" green="0.3182787769" blue="0.99625196819999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cln-YU-jJs">
+                            <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cln-YU-jJs" userLabel="SignupTapped">
                                 <rect key="frame" x="214" y="385" width="71" height="30"/>
                                 <color key="backgroundColor" red="0.48691344720000002" green="0.26760108999999999" blue="0.84788121729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up">
@@ -75,15 +68,18 @@
                                     <segue destination="0zD-OC-buU" kind="show" identifier="segueToSignup" id="mHL-4m-Vyi"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qac-iw-glh">
+                                <rect key="frame" x="207" y="299" width="186" height="30"/>
+                                <color key="textColor" red="0.52466459424083767" green="0.52466459424083767" blue="0.52466459424083767" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="LoginTapped" destination="ks3-Iv-JO7" id="tXx-pN-icz"/>
-                        <outlet property="Password" destination="qac-iw-glh" id="Uz5-IT-eVJ"/>
-                        <outlet property="PasswordField" destination="qac-iw-glh" id="nLy-kq-0ux"/>
+                        <outlet property="Password" destination="qac-iw-glh" id="VOc-Ef-xVf"/>
                         <outlet property="Username" destination="9wg-uh-P7A" id="N5X-DD-g5u"/>
-                        <outlet property="UsernameField" destination="9wg-uh-P7A" id="Ly3-5s-9sE"/>
                         <segue destination="GdK-Pu-amn" kind="show" identifier="loginToMainView" id="75v-ch-95e"/>
                     </connections>
                 </viewController>
@@ -173,7 +169,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hn-k6-oPi">
-                                <rect key="frame" x="265" y="452" width="71" height="30"/>
+                                <rect key="frame" x="211" y="455" width="71" height="30"/>
                                 <color key="backgroundColor" red="0.48691344720000002" green="0.26760108999999999" blue="0.84788121729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="0.3182787769" blue="0.99625196819999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,6 +177,18 @@
                                 </state>
                                 <connections>
                                     <action selector="SignupTapped:" destination="0zD-OC-buU" eventType="touchUpInside" id="OUZ-Hr-ElD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGL-43-iyM">
+                                <rect key="frame" x="322" y="455" width="68" height="30"/>
+                                <color key="backgroundColor" red="0.57723576069890525" green="0.2487970511479568" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.61498815367261106" blue="0.96124354330526574" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.66338923265532812" green="0.3720328464001823" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToLogIn:" destination="0zD-OC-buU" eventType="touchUpInside" id="fXx-b0-PRr"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToLogIn" id="9pB-MS-RyU"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -12,7 +12,7 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
-    
+        
     
     @IBAction func SignupTapped(sender: UIButton) {
         
@@ -27,36 +27,16 @@ class LoginVC: UIViewController {
             popAlert("Login Failed", message: "Please enter username and password")
         }
         else{
-            let loginString = String(format: "%@:%@", usernameString, passwordString)
-            
-            let url = NSURL(string: "engineering.wustl.edu/cse")!
-            let session = NSURLSession.sharedSession()
-            let request = NSMutableURLRequest(URL: url)
-            request.HTTPMethod = "POST"
-            request.setValue(loginString, forHTTPHeaderField: "Authorization")
-            
-            session.dataTaskWithRequest(request) {
-                (let data, let response, let error) in
-                if let httpResponse = response as? NSHTTPURLResponse {
-                    do{
-                        let incomingData = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                        
-                        let success:NSInteger = incomingData.valueForKey("success") as! NSInteger
-                        if(success == 1){
-                            self.popAlert("Success", message: "Logged in!")
-                            let calendarView = self.storyboard?.instantiateViewControllerWithIdentifier("calendarView") as! CalendarView
-                            calendarView.loadTextField(incomingData as! NSDictionary)
-                            self.performSegueWithIdentifier("loginToMainView", sender: nil)
-                        }
-                        else{
-                            self.popAlert("Failure", message: "Failed to login")
-                        }
-                        
-                    } catch{
-                        self.popAlert("Error", message: "Failed to parse response from server")
-                    }
-                }
-                }.resume()
+            let proxy = APIProxy()
+            let returnedResult:NSDictionary = proxy.login(usernameString,password: passwordString)
+            let status = returnedResult.valueForKey("status")
+            if(status != nil && status as! String == "success"){
+                self.popAlert("Success", message: "you have logged in")
+                switchToMainView(returnedResult.valueForKey("data") as! NSDictionary)
+            }
+            else{
+                self.popAlert("Failure", message: "Login failed")
+            }
             
         }
         
@@ -64,7 +44,7 @@ class LoginVC: UIViewController {
     
     func switchToMainView(data:NSDictionary){
         
-        self.performSegueWithIdentifier("loginToMainView", sender: <#T##AnyObject?#>)
+        self.performSegueWithIdentifier("loginToMainView", sender: self)
     }
     
     
