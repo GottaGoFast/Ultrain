@@ -10,10 +10,15 @@ import UIKit
 
 class CalendarView: UIViewController {
 
-    @IBOutlet weak var textField: UITextView!
+
+    @IBOutlet weak var webView: UIWebView!
+    var data:NSDictionary!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let url = NSURL(string: data.valueForKey("url") as! String)
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
         // Do any additional setup after loading the view.
     }
 
@@ -22,15 +27,7 @@ class CalendarView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadTextField(data:NSDictionary){
-        var textToShow:String = ""
-        let enumerator = data.keyEnumerator()
-        while let key = enumerator.nextObject(){
-            textToShow = textToShow + (key as! String)
-        }
-        textField.text = textToShow
-    }
-
+    
     /*
     // MARK: - Navigation
 

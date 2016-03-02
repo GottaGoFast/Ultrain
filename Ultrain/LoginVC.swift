@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    var dataToPass:NSDictionary!
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
         
@@ -43,7 +43,7 @@ class LoginVC: UIViewController {
     }
     
     func switchToMainView(data:NSDictionary){
-        
+        self.dataToPass = data
         self.performSegueWithIdentifier("loginToMainView", sender: self)
     }
     
@@ -70,6 +70,13 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "loginToMainView") {
+            let calView = segue.destinationViewController as! CalendarView;
+            calView.data = dataToPass
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

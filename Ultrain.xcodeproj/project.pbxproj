@@ -10,6 +10,7 @@
 		0C89F0F3ED8F7B19AEEDC964 /* Pods_Ultrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */; };
 		C706DD001C84AB9400632646 /* APIProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706DCFF1C84AB9400632646 /* APIProxy.swift */; };
 		C706DD021C874B5400632646 /* loginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C706DD011C874B5400632646 /* loginBackground.jpg */; };
+		C706DD041C87500800632646 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706DD031C87500800632646 /* CalendarView.swift */; };
 		C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */; };
 		C7A8653F1C7FD4FE00FC22C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */; };
 		C7A865411C7FD4FE00FC22C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		C7A8655A1C7FD4FF00FC22C0 /* UltrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865591C7FD4FF00FC22C0 /* UltrainUITests.swift */; };
 		C7A865681C7FD53C00FC22C0 /* UltrainResources in Resources */ = {isa = PBXBuildFile; fileRef = C7A865671C7FD53C00FC22C0 /* UltrainResources */; };
 		C7A8656E1C80FECF00FC22C0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8656D1C80FECF00FC22C0 /* LoginVC.swift */; };
-		C7A865721C83B96E00FC22C0 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865711C83B96E00FC22C0 /* CalendarView.swift */; };
 		C7A865741C83D4C500FC22C0 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865731C83D4C500FC22C0 /* SignupVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,7 @@
 		69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ultrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C706DCFF1C84AB9400632646 /* APIProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProxy.swift; sourceTree = "<group>"; };
 		C706DD011C874B5400632646 /* loginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loginBackground.jpg; path = UltrainResources/loginBackground.jpg; sourceTree = "<group>"; };
+		C706DD031C87500800632646 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		C7A865361C7FD4FE00FC22C0 /* Ultrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ultrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7A8653E1C7FD4FE00FC22C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		C7A8655B1C7FD4FF00FC22C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7A865671C7FD53C00FC22C0 /* UltrainResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UltrainResources; sourceTree = SOURCE_ROOT; };
 		C7A8656D1C80FECF00FC22C0 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		C7A865711C83B96E00FC22C0 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		C7A865731C83D4C500FC22C0 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,8 +127,8 @@
 				C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */,
 				C7A8656D1C80FECF00FC22C0 /* LoginVC.swift */,
 				C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */,
+				C706DD031C87500800632646 /* CalendarView.swift */,
 				C7A865731C83D4C500FC22C0 /* SignupVC.swift */,
-				C7A865711C83B96E00FC22C0 /* CalendarView.swift */,
 				C706DCFF1C84AB9400632646 /* APIProxy.swift */,
 				C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */,
 				C7A865421C7FD4FE00FC22C0 /* LaunchScreen.storyboard */,
@@ -352,7 +352,7 @@
 				C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */,
 				C7A8656E1C80FECF00FC22C0 /* LoginVC.swift in Sources */,
 				C706DD001C84AB9400632646 /* APIProxy.swift in Sources */,
-				C7A865721C83B96E00FC22C0 /* CalendarView.swift in Sources */,
+				C706DD041C87500800632646 /* CalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
