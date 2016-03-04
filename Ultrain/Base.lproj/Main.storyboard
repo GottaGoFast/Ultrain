@@ -90,7 +90,6 @@
         <!--Calendar View-->
         <scene sceneID="hke-qy-EN3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YVx-TU-5Gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="GdK-Pu-amn" customClass="CalendarView" customModule="Ultrain" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i1a-9n-SzT"/>
@@ -111,6 +110,7 @@
                         <outlet property="webView" destination="xUx-iW-Xds" id="gAI-is-4ME"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVx-TU-5Gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="678" y="1088"/>
         </scene>
@@ -188,6 +188,18 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="backToLogIn" id="9pB-MS-RyU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up as a Trainee!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDO-NY-Zpa">
+                                <rect key="frame" x="436" y="252" width="138" height="21"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <color key="textColor" red="0.52429292770000002" green="0.61367425769999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18W-bz-GZE">
+                                <rect key="frame" x="472" y="213" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchPressed:" destination="0zD-OC-buU" eventType="valueChanged" id="lqg-jK-4AO"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.70556125018288518" blue="0.57839550934994621" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -195,6 +207,9 @@
                         <outlet property="NameField" destination="pH9-eb-gaF" id="4et-DM-maP"/>
                         <outlet property="PasswordField" destination="jrP-jD-651" id="Bga-1y-Fqx"/>
                         <outlet property="UsernameField" destination="htG-XQ-er8" id="NId-ZM-Aai"/>
+                        <outlet property="typeLabel" destination="sDO-NY-Zpa" id="tHA-TK-3BM"/>
+                        <outlet property="typeSwitch" destination="18W-bz-GZE" id="sVm-pt-iDv"/>
+                        <segue destination="GdK-Pu-amn" kind="show" identifier="signupToMainView" id="ELc-bP-EfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bM6-dM-epN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,4 +220,7 @@
     <resources>
         <image name="loginBackground.jpg" width="540" height="720"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ELc-bP-EfY"/>
+    </inferredMetricsTieBreakers>
 </document>

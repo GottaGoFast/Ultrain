@@ -40,8 +40,42 @@ class APIProxy{
             }
             }.resume()
         return ret
+    }
+ 
+    func signup(name:String, email:String, password:String, type:String) -> NSDictionary{
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "POST"
+        request.setValue(name, forHTTPHeaderField: "Name")
+        request.setValue(email, forHTTPHeaderField: "Email")
+        request.setValue(password, forHTTPHeaderField: "Password")
+        request.setValue(type, forHTTPHeaderField: "Type")
+        var ret:NSDictionary = NSDictionary()
+        session.dataTaskWithRequest(request) {
+            (let data, let response, let error) in
+            if let httpResponse = response as? NSHTTPURLResponse {
+                do{
+                    let incomingData = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                    
+                    let success:NSInteger = incomingData.valueForKey("success") as! NSInteger
+                    if(success == 1){
+                        ret.setValue("success", forKey: "status")
+                        ret.setValue(incomingData, forKey: "data")
+                        
+                    }
+                    else{
+                        ret.setValue("failure", forKey: "status")
+                    }
+                    
+                } catch{
+                    ret.setValue("error", forKey: "error")
+                }
+            }
+            }.resume()
+        return ret
         
     }
-    
+
 }
+
 
