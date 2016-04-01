@@ -11,14 +11,12 @@ import UIKit
 class CalendarView: UIViewController {
 
 
-    @IBOutlet weak var webView: UIWebView!
     var data:NSDictionary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = NSURL(string: data.valueForKey("url") as! String)
         let request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
         // Do any additional setup after loading the view.
     }
 

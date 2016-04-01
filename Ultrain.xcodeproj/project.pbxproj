@@ -11,6 +11,7 @@
 		C706DD001C84AB9400632646 /* APIProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706DCFF1C84AB9400632646 /* APIProxy.swift */; };
 		C706DD021C874B5400632646 /* loginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C706DD011C874B5400632646 /* loginBackground.jpg */; };
 		C706DD041C87500800632646 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706DD031C87500800632646 /* CalendarView.swift */; };
+		C78FBA8B1CAECE9C001BAF9A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78FBA8A1CAECE9C001BAF9A /* SWRevealViewController.m */; };
 		C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */; };
 		C7A8653F1C7FD4FE00FC22C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */; };
 		C7A865411C7FD4FE00FC22C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */; };
@@ -46,6 +47,9 @@
 		C706DCFF1C84AB9400632646 /* APIProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProxy.swift; sourceTree = "<group>"; };
 		C706DD011C874B5400632646 /* loginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loginBackground.jpg; path = UltrainResources/loginBackground.jpg; sourceTree = "<group>"; };
 		C706DD031C87500800632646 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		C78FBA881CAECE9B001BAF9A /* Ultrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ultrain-Bridging-Header.h"; sourceTree = "<group>"; };
+		C78FBA891CAECE9C001BAF9A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C78FBA8A1CAECE9C001BAF9A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C7A865361C7FD4FE00FC22C0 /* Ultrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ultrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7A8653E1C7FD4FE00FC22C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +137,9 @@
 				C7A865401C7FD4FE00FC22C0 /* Assets.xcassets */,
 				C7A865421C7FD4FE00FC22C0 /* LaunchScreen.storyboard */,
 				C7A865451C7FD4FF00FC22C0 /* Info.plist */,
+				C78FBA891CAECE9C001BAF9A /* SWRevealViewController.h */,
+				C78FBA8A1CAECE9C001BAF9A /* SWRevealViewController.m */,
+				C78FBA881CAECE9B001BAF9A /* Ultrain-Bridging-Header.h */,
 			);
 			path = Ultrain;
 			sourceTree = "<group>";
@@ -229,7 +236,7 @@
 		C7A8652E1C7FD4FE00FC22C0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Yifu Ma";
 				TargetAttributes = {
@@ -353,6 +360,7 @@
 				C7A8656E1C80FECF00FC22C0 /* LoginVC.swift in Sources */,
 				C706DD001C84AB9400632646 /* APIProxy.swift in Sources */,
 				C706DD041C87500800632646 /* CalendarView.swift in Sources */,
+				C78FBA8B1CAECE9C001BAF9A /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,10 +501,13 @@
 			baseConfigurationReference = 01A97D8FF7FAD55AEFF6AF93 /* Pods-Ultrain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Ultrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = F13X.Ultrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ultrain/Ultrain-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -505,10 +516,12 @@
 			baseConfigurationReference = 4521A7386664945EF144F7E9 /* Pods-Ultrain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Ultrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = F13X.Ultrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ultrain/Ultrain-Bridging-Header.h";
 			};
 			name = Release;
 		};

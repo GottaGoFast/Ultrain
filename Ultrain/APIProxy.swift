@@ -18,9 +18,10 @@ class APIProxy{
         request.HTTPMethod = "POST"
         request.setValue(loginString, forHTTPHeaderField: "Authorization")
         var ret:NSDictionary = NSDictionary()
-        session.dataTaskWithRequest(request) {
-            (let data, let response, let error) in
-            if let httpResponse = response as? NSHTTPURLResponse {
+        let semaphore: dispatch_semaphore_t = dispatch_semaphore_create(0)
+        session.dataTaskWithRequest(request, completionHandler: {
+            (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            if (data != nil) {
                 do{
                     let incomingData = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                     
@@ -37,23 +38,32 @@ class APIProxy{
                 } catch{
                     ret.setValue("error", forKey: "error")
                 }
+                dispatch_semaphore_signal(semaphore)
+            }else{
+                ret.setValue("failure", forKey: "status")
+                ret.setValue("No data returned", forKey: "error")
+                dispatch_semaphore_signal(semaphore)
             }
-            }.resume()
+        }).resume()
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+
         return ret
     }
  
     func signup(name:String, email:String, password:String, type:String) -> NSDictionary{
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest(URL: url)
+        
         request.HTTPMethod = "POST"
         request.setValue(name, forHTTPHeaderField: "Name")
         request.setValue(email, forHTTPHeaderField: "Email")
         request.setValue(password, forHTTPHeaderField: "Password")
         request.setValue(type, forHTTPHeaderField: "Type")
+        let semaphore: dispatch_semaphore_t = dispatch_semaphore_create(0)
         var ret:NSDictionary = NSDictionary()
-        session.dataTaskWithRequest(request) {
-            (let data, let response, let error) in
-            if let httpResponse = response as? NSHTTPURLResponse {
+        session.dataTaskWithRequest(request, completionHandler: {
+            (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            if (data != nil) {
                 do{
                     let incomingData = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                     
@@ -70,8 +80,14 @@ class APIProxy{
                 } catch{
                     ret.setValue("error", forKey: "error")
                 }
+                dispatch_semaphore_signal(semaphore)
+            }else{
+                ret.setValue("failure", forKey: "status")
+                ret.setValue("No data returned", forKey: "error")
+                dispatch_semaphore_signal(semaphore)
             }
-            }.resume()
+        }).resume()
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return ret
         
     }
