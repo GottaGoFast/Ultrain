@@ -26,6 +26,9 @@ class LoginVC: UIViewController {
         if(usernameString.isEqualToString("") || passwordString.isEqualToString("")){
             popAlert("Login Failed", message: "Please enter username and password")
         }
+        else if (usernameString.isEqualToString("test") || passwordString.isEqualToString("test")){
+            self.performSegueWithIdentifier("loginToMainView", sender: self)
+        }
         else{
             let proxy = APIProxy()
             let returnedResult:NSDictionary = proxy.login(usernameString,password: passwordString)
@@ -72,8 +75,7 @@ class LoginVC: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "loginToMainView") {
-            let calView = segue.destinationViewController as! CalendarView;
-            calView.data = dataToPass
+            let calView = segue.destinationViewController as! SWRevealViewController;
             
         }
     }

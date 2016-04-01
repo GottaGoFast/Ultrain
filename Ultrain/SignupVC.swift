@@ -75,8 +75,7 @@ class SignupVC: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "signupToMainView") {
-            let calView = segue.destinationViewController as! CalendarView;
-            calView.data = data
+            let calView = segue.destinationViewController as! SWRevealViewController;
         }
     }
     

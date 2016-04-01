@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ultrain/LoginVC.swift"
-            timestampString = "478475242.869198"
+            timestampString = "481225570.501802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "switchToMainView(_:)"
             landmarkType = "5">
          </BreakpointContent>
