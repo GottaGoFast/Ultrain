@@ -24,6 +24,11 @@
 		C7A865681C7FD53C00FC22C0 /* UltrainResources in Resources */ = {isa = PBXBuildFile; fileRef = C7A865671C7FD53C00FC22C0 /* UltrainResources */; };
 		C7A8656E1C80FECF00FC22C0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8656D1C80FECF00FC22C0 /* LoginVC.swift */; };
 		C7A865741C83D4C500FC22C0 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A865731C83D4C500FC22C0 /* SignupVC.swift */; };
+		C7AE2E911CB803F4000CCBC0 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE2E901CB803F4000CCBC0 /* Setting.swift */; };
+		C7AE2E931CB8110A000CCBC0 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE2E921CB8110A000CCBC0 /* ProfileCell.swift */; };
+		C7AE2E951CB815D0000CCBC0 /* genWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE2E941CB815D0000CCBC0 /* genWorkoutCell.swift */; };
+		C7AE2E971CB818E4000CCBC0 /* detWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE2E961CB818E4000CCBC0 /* detWorkout.swift */; };
+		C7AE2E991CB81AC2000CCBC0 /* detWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AE2E981CB81AC2000CCBC0 /* detWorkoutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		C7A865671C7FD53C00FC22C0 /* UltrainResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UltrainResources; sourceTree = SOURCE_ROOT; };
 		C7A8656D1C80FECF00FC22C0 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C7A865731C83D4C500FC22C0 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		C7AE2E901CB803F4000CCBC0 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		C7AE2E921CB8110A000CCBC0 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		C7AE2E941CB815D0000CCBC0 /* genWorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = genWorkoutCell.swift; sourceTree = "<group>"; };
+		C7AE2E961CB818E4000CCBC0 /* detWorkout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detWorkout.swift; sourceTree = "<group>"; };
+		C7AE2E981CB81AC2000CCBC0 /* detWorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detWorkoutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +147,11 @@
 				C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */,
 				C7A8656D1C80FECF00FC22C0 /* LoginVC.swift */,
 				C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */,
+				C7AE2E981CB81AC2000CCBC0 /* detWorkoutCell.swift */,
+				C7AE2E961CB818E4000CCBC0 /* detWorkout.swift */,
+				C7AE2E941CB815D0000CCBC0 /* genWorkoutCell.swift */,
+				C7AE2E921CB8110A000CCBC0 /* ProfileCell.swift */,
+				C7AE2E901CB803F4000CCBC0 /* Setting.swift */,
 				C7404C5B1CAEF55E00EF7780 /* Workouts.swift */,
 				C78FBA9A1CAEE9F0001BAF9A /* Calendar.swift */,
 				C78FBA901CAEDF16001BAF9A /* MenuViewController.swift */,
@@ -364,8 +379,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AE2E911CB803F4000CCBC0 /* Setting.swift in Sources */,
 				C7A865741C83D4C500FC22C0 /* SignupVC.swift in Sources */,
 				C78FBA911CAEDF16001BAF9A /* MenuViewController.swift in Sources */,
+				C7AE2E931CB8110A000CCBC0 /* ProfileCell.swift in Sources */,
+				C7AE2E971CB818E4000CCBC0 /* detWorkout.swift in Sources */,
+				C7AE2E991CB81AC2000CCBC0 /* detWorkoutCell.swift in Sources */,
+				C7AE2E951CB815D0000CCBC0 /* genWorkoutCell.swift in Sources */,
 				C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */,
 				C78FBA9B1CAEE9F0001BAF9A /* Calendar.swift in Sources */,
 				C78FBA991CAEE5FB001BAF9A /* Profile.swift in Sources */,

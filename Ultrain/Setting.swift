@@ -1,16 +1,16 @@
 //
-//  Profile.swift
-//  
+//  Setting.swift
+//  Ultrain
 //
-//  Created by Yifu Ma on 4/1/16.
-//
+//  Created by Yifu Ma on 4/8/16.
+//  Copyright © 2016 Yifu Ma. All rights reserved.
 //
 
 import UIKit
 
-class Profile: UITableViewController {
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+class Setting: UITableViewController {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
@@ -34,27 +34,23 @@ class Profile: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProfileCell
-        
-        cell.fName.text = "Cookie"
-        cell.lName.text = "Monster"
-        cell.profileIntro.text = "Hi I am the most civilizied eater you'll ever seaa"
-        cell.goal.text = "Be a good guy"
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
         // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

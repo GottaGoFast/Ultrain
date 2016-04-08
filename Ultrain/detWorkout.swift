@@ -1,23 +1,18 @@
 //
-//  Profile.swift
-//  
+//  detWorkout.swift
+//  Ultrain
 //
-//  Created by Yifu Ma on 4/1/16.
-//
+//  Created by Yifu Ma on 4/8/16.
+//  Copyright © 2016 Yifu Ma. All rights reserved.
 //
 
 import UIKit
 
-class Profile: UITableViewController {
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+class detWorkout: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,12 +39,10 @@ class Profile: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProfileCell
-        
-        cell.fName.text = "Cookie"
-        cell.lName.text = "Monster"
-        cell.profileIntro.text = "Hi I am the most civilizied eater you'll ever seaa"
-        cell.goal.text = "Be a good guy"
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! detWorkoutCell
+        cell.actName.text = "Crunches"
+        cell.actDet.text = "500 crunches in 30 seconds"
+
         // Configure the cell...
 
         return cell
