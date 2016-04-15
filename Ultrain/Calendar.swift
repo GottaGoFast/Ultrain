@@ -2,8 +2,8 @@
 //  Calendar.swift
 //  Ultrain
 //
-//  Created by Yifu Ma on 4/1/16.
-//  Copyright © 2016 Yifu Ma. All rights reserved.
+//  Created by Zixing Li on 4/1/16.
+//  Copyright © 2016 Zixing Li. All rights reserved.
 //
 
 import UIKit
@@ -190,42 +190,43 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
         return true
     }
     
-    func dotMarker(shouldShowOnDayView dayView: CVCalendarDayView) -> Bool {
-        let day = dayView.date.day
-        let randomDay = Int(arc4random_uniform(31))
-        if day == randomDay {
-            return true
-        }
-        
-        return false
-    }
+    // Below are the code for displaying random dots underneath each date
+//    func dotMarker(shouldShowOnDayView dayView: CVCalendarDayView) -> Bool {
+//        let day = dayView.date.day
+//        let randomDay = Int(arc4random_uniform(31))
+//        if day == randomDay {
+//            return true
+//        }
+//        
+//        return false
+//    }
     
-    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> [UIColor] {
-        
-        let red = CGFloat(arc4random_uniform(600) / 255)
-        let green = CGFloat(arc4random_uniform(600) / 255)
-        let blue = CGFloat(arc4random_uniform(600) / 255)
-        
-        let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
-        
-        let numberOfDots = Int(arc4random_uniform(3) + 1)
-        switch(numberOfDots) {
-        case 2:
-            return [color, color]
-        case 3:
-            return [color, color, color]
-        default:
-            return [color] // return 1 dot
-        }
-    }
+//    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> [UIColor] {
+//        
+//        let red = CGFloat(arc4random_uniform(600) / 255)
+//        let green = CGFloat(arc4random_uniform(600) / 255)
+//        let blue = CGFloat(arc4random_uniform(600) / 255)
+//        
+//        let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
+//        
+//        let numberOfDots = Int(arc4random_uniform(3) + 1)
+//        switch(numberOfDots) {
+//        case 2:
+//            return [color, color]
+//        case 3:
+//            return [color, color, color]
+//        default:
+//            return [color] // return 1 dot
+//        }
+//    }
     
-    func dotMarker(shouldMoveOnHighlightingOnDayView dayView: CVCalendarDayView) -> Bool {
-        return true
-    }
+//    func dotMarker(shouldMoveOnHighlightingOnDayView dayView: CVCalendarDayView) -> Bool {
+//        return true
+//    }
     
-    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
-        return 13
-    }
+//    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
+//        return 13
+//    }
     
     
     func weekdaySymbolType() -> WeekdaySymbolType {
@@ -252,7 +253,7 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
         }
         return false
     }
-    
+
     func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
         let π = M_PI
         
@@ -290,13 +291,15 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
         return newView
     }
     
-    func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
-        if (Int(arc4random_uniform(3)) == 1) {
-            return true
-        }
-        
-        return false
-    }
+        // Below are the codes for displaying circles around random dates
+
+//    func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
+//        if (Int(arc4random_uniform(3)) == 1) {
+//            return true
+//        }
+//        
+//        return false
+//    }
 }
 
 extension Calendar: CVCalendarViewAppearanceDelegate {
