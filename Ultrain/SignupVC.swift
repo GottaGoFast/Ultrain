@@ -55,13 +55,13 @@ class SignupVC: UIViewController {
             self.popAlert("Error", message: "The above fields cannot be empty!")
         }
         else{
-        
-            let proxy = APIProxy()
-            let returnedResult:NSDictionary = proxy.signup(nameString as String, email: username as String, password: password as String, type: type)
+            let returnedResult:NSDictionary = APIProxy.sharedInstance.signup(nameString as String, email: username as String, password: password as String, type: type)
             let status = returnedResult.valueForKey("status")
             if(status != nil && status as! String == "success"){
                 self.popAlert("Success", message: "you have signed up")
-                self.data = returnedResult
+                let raw = returnedResult.valueForKey("data") as! NSDictionary
+                APIProxy.sharedInstance.setUserInfo(raw.valueForKey("user") as! NSDictionary)
+                APIProxy.sharedInstance.setRawData(raw)
                 self.performSegueWithIdentifier("signupToMainView", sender: self)
             }
             else{

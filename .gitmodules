@@ -1,0 +1,4 @@
+[submodule "CVCalendars"]
+	path = CVCalendars
+	url = https://github.com/Mozharovsky/CVCalendar.git
+	branch = master

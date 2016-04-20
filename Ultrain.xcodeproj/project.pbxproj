@@ -38,6 +38,7 @@
 		1E2AAE781CC1424B00884920 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E2AAE5C1CC1424B00884920 /* Info.plist */; };
 		C706DD001C84AB9400632646 /* APIProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706DCFF1C84AB9400632646 /* APIProxy.swift */; };
 		C706DD021C874B5400632646 /* loginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C706DD011C874B5400632646 /* loginBackground.jpg */; };
+		C72482611CC146A5009D722A /* TrainerProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72482601CC146A5009D722A /* TrainerProfileCell.swift */; };
 		C7404C5C1CAEF55E00EF7780 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7404C5B1CAEF55E00EF7780 /* Workouts.swift */; };
 		C78FBA8B1CAECE9C001BAF9A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78FBA8A1CAECE9C001BAF9A /* SWRevealViewController.m */; };
 		C78FBA911CAEDF16001BAF9A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78FBA901CAEDF16001BAF9A /* MenuViewController.swift */; };
@@ -111,6 +112,7 @@
 		69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ultrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C706DCFF1C84AB9400632646 /* APIProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProxy.swift; sourceTree = "<group>"; };
 		C706DD011C874B5400632646 /* loginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loginBackground.jpg; path = UltrainResources/loginBackground.jpg; sourceTree = "<group>"; };
+		C72482601CC146A5009D722A /* TrainerProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerProfileCell.swift; sourceTree = "<group>"; };
 		C7404C5B1CAEF55E00EF7780 /* Workouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
 		C78FBA881CAECE9B001BAF9A /* Ultrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ultrain-Bridging-Header.h"; sourceTree = "<group>"; };
 		C78FBA891CAECE9C001BAF9A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				C7A865391C7FD4FE00FC22C0 /* AppDelegate.swift */,
 				C7A8656D1C80FECF00FC22C0 /* LoginVC.swift */,
 				C7A8653D1C7FD4FE00FC22C0 /* Main.storyboard */,
+				C72482601CC146A5009D722A /* TrainerProfileCell.swift */,
 				C7AE2E981CB81AC2000CCBC0 /* detWorkoutCell.swift */,
 				C7AE2E961CB818E4000CCBC0 /* detWorkout.swift */,
 				C7AE2E941CB815D0000CCBC0 /* genWorkoutCell.swift */,
@@ -503,6 +506,7 @@
 				C7A8653A1C7FD4FE00FC22C0 /* AppDelegate.swift in Sources */,
 				C78FBA9B1CAEE9F0001BAF9A /* Calendar.swift in Sources */,
 				C78FBA991CAEE5FB001BAF9A /* Profile.swift in Sources */,
+				C72482611CC146A5009D722A /* TrainerProfileCell.swift in Sources */,
 				C7404C5C1CAEF55E00EF7780 /* Workouts.swift in Sources */,
 				C7A8656E1C80FECF00FC22C0 /* LoginVC.swift in Sources */,
 				1E2AAE5E1CC1424B00884920 /* CVCalendarContentViewController.swift in Sources */,

@@ -9,10 +9,12 @@
 import UIKit
 
 class detWorkout: UITableViewController {
-
+    
+    var activities = [NSDictionary]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        activities = APIProxy.sharedInstance.workout[APIProxy.sharedInstance.currentWorkoutNum].valueForKey("activities") as! [NSDictionary]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,14 +36,14 @@ class detWorkout: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return activities.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! detWorkoutCell
-        cell.actName.text = "Crunches"
-        cell.actDet.text = "500 crunches in 30 seconds"
+        cell.actName.text = activities[indexPath.row].valueForKey("name")
+        cell.actDet.text = activities[indexPath.row].valueForKey("detail")
 
         // Configure the cell...
 

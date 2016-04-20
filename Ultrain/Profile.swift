@@ -10,7 +10,6 @@ import UIKit
 
 class Profile: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
@@ -44,15 +43,31 @@ class Profile: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProfileCell
+        let userInfo : NSDictionary = APIProxy.sharedInstance.userInfo
+        let raw : NSDictionary = APIProxy.sharedInstance.rawData
+        let url = NSURL(string: raw.valueForKey("profile_pic") as! String)
+        let imageData = NSData(contentsOfURL: url!)
         
-        cell.fName.text = "Cookie"
-        cell.lName.text = "Monster"
-        cell.profileIntro.text = "Hi I am the most civilizied eater you'll ever seaa"
-        cell.goal.text = "Be a good guy"
+        if(raw.valueForKey("level") as! String == "TRAINER"){
+            let cell = tableView.dequeueReusableCellWithIdentifier("TCell", forIndexPath: indexPath) as! TrainerProfileCell
+            cell.profilePic.image = UIImage(data: imageData!)
+            cell.fName.text = userInfo.valueForKey("first_name") as! String
+            cell.lName.text = userInfo.valueForKey("last_name") as! String
+            cell.pastExperience.text = raw.valueForKey("past_experience") as! String
+            cell.Introduction.text = "strongest trainer you'll ever see"
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProfileCell
+            cell.profilePic.image = UIImage(data: imageData!)
+            cell.fName.text = userInfo.valueForKey("first_name") as! String
+            cell.lName.text = userInfo.valueForKey("last_name") as! String
+            cell.goal.text = raw.valueForKey("goal") as! String
+            cell.profileIntro.text = "most determined trainee you'll ever see"
+            return cell
         // Configure the cell...
-
-        return cell
+        }
+        
     }
     
 

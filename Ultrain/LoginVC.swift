@@ -30,12 +30,14 @@ class LoginVC: UIViewController {
             self.performSegueWithIdentifier("loginToMainView", sender: self)
         }
         else{
-            let proxy = APIProxy()
-            let returnedResult:NSDictionary = proxy.login(usernameString,password: passwordString)
+            let returnedResult:NSDictionary = APIProxy.sharedInstance.login(usernameString,password: passwordString)
             let status = returnedResult.valueForKey("status")
             if(status != nil && status as! String == "success"){
                 self.popAlert("Success", message: "you have logged in")
-                switchToMainView(returnedResult.valueForKey("data") as! NSDictionary)
+                let raw:NSDictionary = returnedResult.valueForKey("data") as! NSDictionary
+                APIProxy.sharedInstance.setRawData(raw)
+                APIProxy.sharedInstance.setUserInfo(raw.valueForKey("user") as! NSDictionary)
+                self.performSegueWithIdentifier("loginToMainView", sender: self)
             }
             else{
                 self.popAlert("Failure", message: "Login failed")
@@ -45,10 +47,6 @@ class LoginVC: UIViewController {
         
     }
     
-    func switchToMainView(data:NSDictionary){
-        self.dataToPass = data
-        self.performSegueWithIdentifier("loginToMainView", sender: self)
-    }
     
     
     func popAlert(title:String, message:String){
