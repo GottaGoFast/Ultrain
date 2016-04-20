@@ -194,13 +194,13 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
 //    func dotMarker(shouldShowOnDayView dayView: CVCalendarDayView) -> Bool {
 //        let day = dayView.date.day
 //        let randomDay = Int(arc4random_uniform(31))
-//        if day == randomDay {
+//        if (day == selectedDay.date.day && selectedDay != nil) {
 //            return true
 //        }
 //        
 //        return false
 //    }
-    
+//    
 //    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> [UIColor] {
 //        
 //        let red = CGFloat(arc4random_uniform(600) / 255)
@@ -219,11 +219,11 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
 //            return [color] // return 1 dot
 //        }
 //    }
-    
+//    
 //    func dotMarker(shouldMoveOnHighlightingOnDayView dayView: CVCalendarDayView) -> Bool {
 //        return true
 //    }
-    
+//    
 //    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
 //        return 13
 //    }
