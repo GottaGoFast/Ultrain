@@ -19,6 +19,8 @@ class Calendar: UIViewController {
     var shouldShowDaysOut = true
     var animationFinished = true
     var selectedDay:DayView!
+    // ADDED: Container to store dates that we want to save
+    var addedDates = [CVDate :  String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,6 +148,11 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
         print("\(dayView.date.commonDescription) is selected!")
         selectedDay = dayView
+        // Added to demonstrate the functionality of dictionary
+        addedDates[dayView.date] = dayView.date.globalDescription
+        for (dates, strs) in addedDates {
+            print("\(dates.commonDescription): \(strs)")
+        }
     }
     
     func presentedDateUpdated(date: CVDate) {
@@ -191,42 +198,48 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     }
     
     // Below are the code for displaying random dots underneath each date
-//    func dotMarker(shouldShowOnDayView dayView: CVCalendarDayView) -> Bool {
-//        let day = dayView.date.day
-//        let randomDay = Int(arc4random_uniform(31))
-//        if (day == selectedDay.date.day && selectedDay != nil) {
-//            return true
-//        }
-//        
-//        return false
-//    }
-//    
-//    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> [UIColor] {
-//        
-//        let red = CGFloat(arc4random_uniform(600) / 255)
-//        let green = CGFloat(arc4random_uniform(600) / 255)
-//        let blue = CGFloat(arc4random_uniform(600) / 255)
-//        
-//        let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
-//        
-//        let numberOfDots = Int(arc4random_uniform(3) + 1)
-//        switch(numberOfDots) {
-//        case 2:
-//            return [color, color]
-//        case 3:
-//            return [color, color, color]
-//        default:
-//            return [color] // return 1 dot
-//        }
-//    }
-//    
-//    func dotMarker(shouldMoveOnHighlightingOnDayView dayView: CVCalendarDayView) -> Bool {
-//        return true
-//    }
-//    
-//    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
-//        return 13
-//    }
+    func dotMarker(shouldShowOnDayView dayView: CVCalendarDayView) -> Bool {
+        //let day = dayView.date.day
+        //let randomDay = Int(arc4random_uniform(31))
+        print("!")
+        if (selectedDay == nil){
+            print("false")
+            return false
+        }
+        else if (dayView == selectedDay) {
+            print("\(selectedDay.date.commonDescription) is selected in dotMarker!")
+            return true
+        }
+        print("false2")
+        return false
+    }
+    
+    func dotMarker(colorOnDayView dayView: CVCalendarDayView) -> [UIColor] {
+        
+        let red = CGFloat(arc4random_uniform(600) / 255)
+        let green = CGFloat(arc4random_uniform(600) / 255)
+        let blue = CGFloat(arc4random_uniform(600) / 255)
+        
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        
+        let numberOfDots = Int(arc4random_uniform(3) + 1)
+        switch(numberOfDots) {
+        case 2:
+            return [color, color]
+        case 3:
+            return [color, color, color]
+        default:
+            return [color] // return 1 dot
+        }
+    }
+    
+    func dotMarker(shouldMoveOnHighlightingOnDayView dayView: CVCalendarDayView) -> Bool {
+        return true
+    }
+    
+    func dotMarker(sizeOnDayView dayView: DayView) -> CGFloat {
+        return 13
+    }
     
     
     func weekdaySymbolType() -> WeekdaySymbolType {
