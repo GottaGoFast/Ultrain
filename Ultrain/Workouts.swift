@@ -11,6 +11,7 @@ import UIKit
 class Workouts: UITableViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
@@ -18,6 +19,9 @@ class Workouts: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        APIProxy.sharedInstance.getWorkout()
+        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -39,18 +43,23 @@ class Workouts: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return APIProxy.sharedInstance.workout.count
     }
 
    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! genWorkoutCell
         
-        cell.genWorkoutName.text = "Burn dem fat"
+        cell.genWorkoutName.text = APIProxy.sharedInstance.workout[indexPath.row].valueForKey("overview")
 
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        APIProxy.sharedInstance.currentWorkoutNum = indexPath.row
+        self.performSegueWithIdentifier("detWorkoutView", sender: self)
     }
     
 
