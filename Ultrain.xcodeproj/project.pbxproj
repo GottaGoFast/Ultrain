@@ -38,6 +38,7 @@
 		1E2AAE781CC1424B00884920 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E2AAE5C1CC1424B00884920 /* Info.plist */; };
 		C706DD001C84AB9400632646 /* APIProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706DCFF1C84AB9400632646 /* APIProxy.swift */; };
 		C706DD021C874B5400632646 /* loginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C706DD011C874B5400632646 /* loginBackground.jpg */; };
+		C70DFB331CCD329500620BD4 /* 1259174914.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C70DFB321CCD329500620BD4 /* 1259174914.jpg */; };
 		C72482611CC146A5009D722A /* TrainerProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72482601CC146A5009D722A /* TrainerProfileCell.swift */; };
 		C7404C5C1CAEF55E00EF7780 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7404C5B1CAEF55E00EF7780 /* Workouts.swift */; };
 		C78FBA8B1CAECE9C001BAF9A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78FBA8A1CAECE9C001BAF9A /* SWRevealViewController.m */; };
@@ -112,6 +113,7 @@
 		69C571F67B87EBE341F4A070 /* Pods_Ultrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ultrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C706DCFF1C84AB9400632646 /* APIProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProxy.swift; sourceTree = "<group>"; };
 		C706DD011C874B5400632646 /* loginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = loginBackground.jpg; path = UltrainResources/loginBackground.jpg; sourceTree = "<group>"; };
+		C70DFB321CCD329500620BD4 /* 1259174914.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1259174914.jpg; sourceTree = "<group>"; };
 		C72482601CC146A5009D722A /* TrainerProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerProfileCell.swift; sourceTree = "<group>"; };
 		C7404C5B1CAEF55E00EF7780 /* Workouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
 		C78FBA881CAECE9B001BAF9A /* Ultrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ultrain-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				C78FBA891CAECE9C001BAF9A /* SWRevealViewController.h */,
 				C78FBA8A1CAECE9C001BAF9A /* SWRevealViewController.m */,
 				C78FBA881CAECE9B001BAF9A /* Ultrain-Bridging-Header.h */,
+				C70DFB321CCD329500620BD4 /* 1259174914.jpg */,
 			);
 			path = Ultrain;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				C7A865681C7FD53C00FC22C0 /* UltrainResources in Resources */,
 				C7A865441C7FD4FE00FC22C0 /* LaunchScreen.storyboard in Resources */,
 				1E2AAE781CC1424B00884920 /* Info.plist in Resources */,
+				C70DFB331CCD329500620BD4 /* 1259174914.jpg in Resources */,
 				C7A865411C7FD4FE00FC22C0 /* Assets.xcassets in Resources */,
 				C7A8653F1C7FD4FE00FC22C0 /* Main.storyboard in Resources */,
 				C706DD021C874B5400632646 /* loginBackground.jpg in Resources */,

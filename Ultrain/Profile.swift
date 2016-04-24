@@ -48,7 +48,17 @@ class Profile: UITableViewController {
         let url = NSURL(string: raw.valueForKey("profile_pic") as! String)
         let imageData = NSData(contentsOfURL: url!)
         
-        if(raw.valueForKey("level") as! String == "TRAINER"){
+        if(userInfo.valueForKey("first_name") as! String == "Seed"){
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProfileCell
+            cell.profilePic.image = UIImage(named: "1259174914.jpg")
+            cell.fName.text = userInfo.valueForKey("first_name") as! String
+            cell.lName.text = userInfo.valueForKey("last_name") as! String
+            cell.goal.text = raw.valueForKey("goal") as! String
+            cell.profileIntro.text = raw.valueForKey("profile") as! String
+            return cell
+
+        }
+        else if(raw.valueForKey("level") as! String == "TRAINER"){
             let cell = tableView.dequeueReusableCellWithIdentifier("TCell", forIndexPath: indexPath) as! TrainerProfileCell
             cell.profilePic.image = UIImage(data: imageData!)
             cell.fName.text = userInfo.valueForKey("first_name") as! String

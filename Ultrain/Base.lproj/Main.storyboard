@@ -125,7 +125,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="501"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bE9-tL-PEk">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1259174914.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bE9-tL-PEk">
                                             <rect key="frame" x="200" y="2" width="201" height="128"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezW-cM-ea5">
@@ -344,16 +344,16 @@
         <scene sceneID="FOc-df-LAP">
             <objects>
                 <tableViewController id="wvY-7W-FEP" customClass="Workouts" customModule="Ultrain" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2mg-hq-Ehh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="2mg-hq-Ehh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="n3n-RB-AtF" customClass="genWorkoutCell" customModule="Ultrain" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="n3n-RB-AtF" customClass="genWorkoutCell" customModule="Ultrain" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n3n-RB-AtF" id="sQe-0C-OQd">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crazy Workout Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-3n-PgW">
@@ -363,7 +363,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to view detail..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxi-Ep-ZSY">
-                                            <rect key="frame" x="469" y="22" width="143" height="21"/>
+                                            <rect key="frame" x="416" y="20" width="143" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -372,6 +372,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="genWorkoutName" destination="tcM-3n-PgW" id="pMb-UI-SSv"/>
+                                    <outlet property="lable" destination="Bxi-Ep-ZSY" id="dhC-Bm-NdZ"/>
                                     <segue destination="7QY-eo-3Xv" kind="show" identifier="detWorkoutView" id="cer-4B-Qks"/>
                                 </connections>
                             </tableViewCell>
@@ -409,13 +410,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgj-yI-2q6">
-                                            <rect key="frame" x="18" y="8" width="117" height="21"/>
+                                            <rect key="frame" x="18" y="8" width="425" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Activities" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-zP-64s">
-                                            <rect key="frame" x="110" y="12" width="381" height="94"/>
+                                            <rect key="frame" x="69" y="37" width="463" height="62"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -777,6 +778,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1259174914.jpg" width="1229" height="1229"/>
         <image name="loginBackground.jpg" width="540" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>

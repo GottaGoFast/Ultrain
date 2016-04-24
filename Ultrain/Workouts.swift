@@ -19,8 +19,17 @@ class Workouts: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        APIProxy.sharedInstance.getWorkout()
-        
+        if(APIProxy.sharedInstance.userInfo.valueForKey("first_name") as! String == "Seed"){
+            var currWorkoutData = [NSDictionary]()
+            currWorkoutData.append(["overview" : "Crazy Workout", "activities" : [["name": "Cardial Burning", "detail": "run for 100 miles"], ["name": "Weight Lifting", "detail": "Do you even Lift?"]]])
+            currWorkoutData.append(["overview" : "Abs Shreader", "activities" : [["name": "Crunches", "detail": "do 100 crunches"], ["name": "leg raise", "detail": "do 25 leg raises"]]])
+            APIProxy.sharedInstance.workout = currWorkoutData
+        }
+        else{
+            APIProxy.sharedInstance.getWorkout()
+
+        }
+                
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,6 +59,7 @@ class Workouts: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! genWorkoutCell
         let currWorkout = APIProxy.sharedInstance.workout[indexPath.row]
+        cell.lable.text = "Tap to view detail..." 
         cell.genWorkoutName.text = currWorkout.valueForKey("overview") as! String
 
         // Configure the cell...
@@ -59,7 +69,7 @@ class Workouts: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         APIProxy.sharedInstance.currentWorkoutNum = indexPath.row
-        self.performSegueWithIdentifier("detWorkoutView", sender: self)
+ //       self.performSegueWithIdentifier("detWorkoutView", sender: self)
     }
     
 

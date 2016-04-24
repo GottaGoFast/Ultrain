@@ -11,6 +11,7 @@ import UIKit
 class genWorkoutCell: UITableViewCell {
 
     @IBOutlet weak var genWorkoutName: UILabel!
+    @IBOutlet weak var lable: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
