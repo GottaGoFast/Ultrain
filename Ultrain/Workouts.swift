@@ -49,8 +49,8 @@ class Workouts: UITableViewController {
    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! genWorkoutCell
-        
-        cell.genWorkoutName.text = APIProxy.sharedInstance.workout[indexPath.row].valueForKey("overview")
+        let currWorkout = APIProxy.sharedInstance.workout[indexPath.row]
+        cell.genWorkoutName.text = currWorkout.valueForKey("overview") as! String
 
         // Configure the cell...
 

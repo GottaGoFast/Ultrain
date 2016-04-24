@@ -372,7 +372,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="genWorkoutName" destination="tcM-3n-PgW" id="pMb-UI-SSv"/>
-                                    <segue destination="7QY-eo-3Xv" kind="push" identifier="detWorkoutView" id="cer-4B-Qks"/>
+                                    <segue destination="7QY-eo-3Xv" kind="show" identifier="detWorkoutView" id="cer-4B-Qks"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -780,7 +780,7 @@
         <image name="loginBackground.jpg" width="540" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="75v-ch-95e"/>
         <segue reference="hom-zC-5Ww"/>
+        <segue reference="ELc-bP-EfY"/>
     </inferredMetricsTieBreakers>
 </document>

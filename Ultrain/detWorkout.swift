@@ -42,8 +42,9 @@ class detWorkout: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! detWorkoutCell
-        cell.actName.text = activities[indexPath.row].valueForKey("name")
-        cell.actDet.text = activities[indexPath.row].valueForKey("detail")
+        
+        cell.actName.text = activities[indexPath.row].valueForKey("name") as! String
+        cell.actDet.text = activities[indexPath.row].valueForKey("detail") as! String
 
         // Configure the cell...
 
