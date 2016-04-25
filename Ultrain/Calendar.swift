@@ -10,6 +10,7 @@ import UIKit
 
 class Calendar: UIViewController {
 
+    @IBOutlet weak var schedule: UITextView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var calendarView: CVCalendarView!
@@ -44,7 +45,6 @@ class Calendar: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         calendarView.commitCalendarViewUpdate()
         menuView.commitMenuViewUpdate()
     }
@@ -152,6 +152,15 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
         addedDates[dayView.date] = dayView.date.globalDescription
         for (dates, strs) in addedDates {
             print("\(dates.commonDescription): \(strs)")
+        }
+        if (dayView.date.commonDescription == "15 April, 2016"){
+            schedule.text = "Run 10K in Forest Park within 50 mins!"
+        }
+        else if (dayView.date.commonDescription == "9 May, 2016") {
+            schedule.text = "6 sets bench press at 200 lbs!"
+        }
+        else {
+            schedule.text = ""
         }
     }
     
