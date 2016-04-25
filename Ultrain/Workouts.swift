@@ -21,7 +21,7 @@ class Workouts: UITableViewController {
         }
         if(APIProxy.sharedInstance.userInfo.valueForKey("first_name") as! String == "Seed"){
             var currWorkoutData = [NSDictionary]()
-            currWorkoutData.append(["overview" : "Crazy Workout", "activities" : [["name": "Cardial Burning", "detail": "run for 100 miles"], ["name": "Weight Lifting", "detail": "Do you even Lift?"]]])
+            currWorkoutData.append(["overview" : "Crazy Workout", "activities" : [["name": "Cardio Burning", "detail": "run for 100 miles"], ["name": "Weight Lifting", "detail": "Do you even Lift?"]]])
             currWorkoutData.append(["overview" : "Abs Shreader", "activities" : [["name": "Crunches", "detail": "do 100 crunches"], ["name": "leg raise", "detail": "do 25 leg raises"]]])
             APIProxy.sharedInstance.workout = currWorkoutData
         }

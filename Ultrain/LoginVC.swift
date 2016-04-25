@@ -26,7 +26,7 @@ class LoginVC: UIViewController {
         if(usernameString.isEqualToString("") || passwordString.isEqualToString("")){
             popAlert("Login Failed", message: "Please enter username and password")
         }
-        else if (usernameString.isEqualToString("seedZeng") || passwordString.isEqualToString("seedZeng")){
+        else if (usernameString.isEqualToString("seedzeng@gmail.com") || passwordString.isEqualToString("seedzeng")){
             var seedData : NSDictionary = ["id" : 1, "level" : "trainee", "auth_token" : "10d89d4cabf1a5eb983ef8a90ef48c23971fc9d40ffe9acfad07d357", "user" : ["email" : "cdzengpeiyun@gmail.com",  "username": "seedZeng", "first_name": "Seed", "last_name": "Zeng"], "profile" : "I love to workout", "profile" : "most determined trainee you'll ever see", "goal": "Lose 30 pounds in 3 weeks", "profile_pic" : "https://www.google.com/"]
             var seedProfile : NSDictionary = ["email" : "cdzengpeiyun@gmail.com",  "username": "seedZeng", "first_name": "Seed", "last_name": "Zeng"]
             APIProxy.sharedInstance.setRawData(seedData)
