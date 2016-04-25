@@ -11,6 +11,7 @@ import UIKit
 class Calendar: UIViewController {
 
     @IBOutlet weak var schedule: UITextView!
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var calendarView: CVCalendarView!
@@ -160,7 +161,7 @@ extension Calendar: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
             schedule.text = "6 sets bench press at 200 lbs!"
         }
         else {
-            schedule.text = ""
+            schedule.text = "No events scheduled for today."
         }
     }
     
